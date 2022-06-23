@@ -68,7 +68,7 @@ div.a{
 ul {
     list-style: none
 }
-footer, header {
+footer {
     width: 100%;
     position: relative
 }
@@ -130,29 +130,18 @@ h
 }
 #main-nav.navbar{
     margin-top: 20px;
-    background-color: #f13a94;
-    color: #ffa489;
+    background: rgba(255, 255, 255, 0.9);
     display: flex;
     padding: 5px 20px;
     align-items: center;
     justify-content: space-between;
 
 }
-#main-nav.navbar span{
-    color: #fff;
-}
+
 
 #main-nav a {
-  color: white;
+  color: rgba(255, 255, 255, 0.9);
 
-}
-
-#main-nav a:hover {
-  text-decoration: underline;
-  color: #4bccf3;
-  font-weight: bold;
-  transition: 0.7s ease;
-  font-size: 20px;
 }
 
 #main-nav.sticky {
@@ -161,54 +150,11 @@ h
   position: fixed;
   top: 0;
   left: 0;
- z-index: 50;
+  z-index: 99;
+
 }
 
-.navbarOffsetMargin {
-  padding-top: 45px;
-}
-.logo{
-    flex: 1;
-  }  
-  .logo a{
-    display: flex;
-    align-items: center;
-  }
-  .logo a:hover{
-    color: #fff;
-  }
-    
-.logo img{
-    background-color: #f13a94;
-    width: 250px;
-    margin-right: 10px;
-}
-.menu{
-    display: flex;
-    align-items: center;
-    list-style: none;
-}
-.menu li{
-    padding: 15px 10px;
-    font-size: 16px;
-    display: flex;
-    transition: 0.7s ease;
-}
 
-.hamburger{
-    display: block;
-    cursor: pointer;
-}
-
-.bar{
-    display: block;
-    width: 25px;
-    height: 3px;
-    margin: 5px auto;
-    -webkit-transform: all 0.3s ease-in-out;
-    transform: all 0.3s ease-in-out;
-    background-color: white;
-}
 #toggle{
     display: block;
 }
@@ -233,13 +179,7 @@ h
     font-size: 11px;
   }
 }
-@media only screen and (max-width: 600px){
-    .navbar{
-        display: none;
-        position: relative;
-        padding: 15px 20px;
-    }
-}
+
 
 
  .container {
@@ -267,13 +207,11 @@ h
     font-size: 20px
 }
  .nav_container {
-    background-color: #ee0979;
+    background: rgba(255, 255, 255, 0.9);
     width: 100%;
     height: 50px
 }
 .nav_container .header_menu {
-    background-color: #ee0979;
-    position: relative;
     right: 0px;
     height: 50px
     
@@ -292,8 +230,8 @@ h
     height: 40px
 }
 .header_menu li a p {
-    color: #fff;
-    font-size: 17px
+    color: black;
+    font-size: 17px;
 }
 .header_menu li a>svg {
     width: 20px;
@@ -302,13 +240,17 @@ h
 .header_menu li a svg path {
     fill: #fff
 }
-.blog_link {
-    border-radius: 5px;
-    border: 1.5px solid rgba(255, 255, 255, 0.4588235294117647)
-}
-.header_menu .active, .header_menu li:hover>a {
-    background: rgba(29, 133, 240, .7686274509803922);
-    border-radius: 5px
+
+/*.header_menu .active, .header_menu li:hover>a {
+    text-decoration: underline;
+    text-decoration-color: green;
+    color:#4bccf3;
+    font-weight: bold;*/
+
+.header_menu .active, .header_menu li a p:hover{
+    color:#ee0979;
+    font-weight: bold;
+    font-size: 20px;
 }
 .chat_site_list {
     position: relative
@@ -324,40 +266,6 @@ h
 }
 .chat_site_list>span svg path {
     fill: #fff
-}
-.header_menu .nav_submenu {
-    position: absolute;
-    top: 50px;
-    left: 109px;
-    box-shadow: 0 0 5px 1px rgba(60, 66, 80, .25);
-    background: #fff;
-    border-radius: 5px;
-    margin-top: 10px;
-    display: none;
-    width: 140px
-}
-.nav_submenu li {
-    text-align: left;
-    text-align: start;
-    padding: 0;
-    margin: 0;
-    height: auto;
-    -webkit-transition: .2s linear background;
-    -moz-transition: .2s linear background;
-    -ms-transition: .2s linear background;
-    transition: .2s linear background
-}
-.nav_submenu li a {
-    color: #333;
-    padding: 0 20px;
-    line-height: 40px;
-    display: block
-}
-.nav_submenu li:hover {
-    background: rgba(140, 212, 254, .58)
-}
-.nav_submenu li:hover>a {
-    background: 0 0
 }
 .header_menu li:focus>.nav_submenu, .header_menu li:hover>.nav_submenu {
     display: block
@@ -384,7 +292,7 @@ h
 .ham_wrap .btn_ham>div {
     width: 45%;
     height: 4px;
-    background: #fff;
+    background: #ee0979;
     position: relative;
     content: '';
     -webkit-transition: .5s ease all;
@@ -449,9 +357,9 @@ h
 }
 .sidebar_wrapper .sidebar_menu {
     width: 180px;
-    background: #f4f4f4;
+    background: rgba(255, 255, 255, 0.9);
     height: 100%;
-    padding-top: 20px
+    padding-top: 20px;
 }
 .sidebar_menu .chat_site_list>span svg path {
     fill: #666
@@ -470,10 +378,10 @@ h
     width: 100%
 }
 .sidebar_menu li:hover a p {
-    color: #4695f8
+    color: #ee0979;
 }
 .sidebar_menu li:hover>a svg path {
-    fill: #4695f8
+    fill: #ee0979;
 }
 .sidebar_menu li a svg {
     width: 20px;
@@ -481,23 +389,6 @@ h
 }
 .sidebar_menu li a svg path {
     fill: #333
-}
-sidebar_submenu {
-    width: 150px;
-    left: 180px;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    background: #fff;
-    box-shadow: 4px 2px 4px 0 rgba(65, 63, 63, .19);
-    padding-top: 20px;
-    margin-left: -100%;
-    z-index: -1;
-    -webkit-transition: .2s linear all;
-    -moz-transition: .2s linear all;
-    -ms-transition: .2s linear all;
-    transition: .2s linear all;
-    opacity: 0
 }
 .sidebar_submenu li {
     text-align: left;
@@ -520,21 +411,22 @@ sidebar_submenu {
     height: 100vh;
     position: relative;
     box-shadow: #91abd1;
-    display: flex;      
+    display: flex; 
+    background-color: #f3f3f3;     
 }
 #content {
     position: relative;
     top: 50px;
-    margin: 10px 5% 100px 5%
+    margin: 10px 5% 100px 5%;
 }
 #content .h1_chat_options {
     font-size: 35px;
     padding: 30px 0 25px 0;
-    letter-spacing: 1.5px
+    letter-spacing: 1.5px;
 }
 #content .h2_more_option {
     padding: 30px 0 25px 0;
-    letter-spacing: .5px
+    letter-spacing: .5px;
 }
 #content .container .chat_option {
     padding: 10px 10px;
@@ -546,7 +438,7 @@ sidebar_submenu {
     -moz-transition: .2s linear all;
     -ms-transition: .2s linear all;
     transition: .2s linear all;
-    width: 220px
+    width: 220px;
 }
 #content .container .chat_option:hover {
     -webkit-transform: scale(1.1);
